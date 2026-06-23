@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AGI 2027 – Das Jahr der Innovatoren | Kurszusammenfassung</title>
+<meta name="description" content="Detaillierte Kurszusammenfassung zum Video „AGI 2027 – 12 Monate, die alles verändern und fast niemand merkt es" (Navigationshilfe KI-Revolution, Lars Hatwig).">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --farbe-hintergrund: #F2ECE4;
+    --farbe-karte:       #FFFFFF;
+    --farbe-dunkel:      #26201B;
+    --farbe-akzent:      #A07D52;
+    --farbe-text:        #26201B;
+    --farbe-text-grau:   #6B6259;
+    --schrift-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    --schrift-sans:  'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --radius:       18px;
+    --schatten:     0 10px 30px rgba(38, 32, 27, 0.08);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--farbe-hintergrund);
+    color: var(--farbe-text);
+    font-family: var(--schrift-sans);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    padding: 64px 40px;
+  }
+
+  .seite { max-width: 1100px; margin: 0 auto; }
+
+  /* ---------- Kopf ---------- */
+  .label {
+    font-family: var(--schrift-sans);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--farbe-text-grau);
+    margin-bottom: 28px;
+  }
+
+  .ueberschrift {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 28px;
+  }
+  .ueberschrift::before {
+    content: "";
+    width: 6px;
+    align-self: stretch;
+    min-height: 56px;
+    background: var(--farbe-akzent);
+    border-radius: 3px;
+  }
+  .ueberschrift h1 {
+    font-family: var(--schrift-serif);
+    font-weight: 800;
+    font-size: 52px;
+    line-height: 1.05;
+    color: var(--farbe-dunkel);
+  }
+
+  .meta {
+    color: var(--farbe-text-grau);
+    font-size: 16px;
+    margin-bottom: 44px;
+    padding-left: 30px;
+  }
+  .meta strong { color: var(--farbe-dunkel); }
+
+  /* ---------- Video ---------- */
+  .video-wrap {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--schatten);
+    margin-bottom: 56px;
+  }
+  .video-wrap iframe {
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 100%; border: 0;
+  }
+
+  /* ---------- Abschnitte ---------- */
+  .abschnitt { margin-bottom: 56px; }
+  .abschnitt-titel {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 24px;
+  }
+  .abschnitt-titel::before {
+    content: "";
+    width: 5px;
+    align-self: stretch;
+    min-height: 34px;
+    background: var(--farbe-akzent);
+    border-radius: 3px;
+  }
+  .abschnitt-titel h2 {
+    font-family: var(--schrift-serif);
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 1.1;
+    color: var(--farbe-dunkel);
+  }
+
+  .fliesstext {
+    font-size: 17px;
+    color: var(--farbe-text);
+    max-width: 820px;
+    margin-bottom: 18px;
+  }
+  .fliesstext.grau { color: var(--farbe-text-grau); }
+  .fliesstext strong { color: var(--farbe-dunkel); font-weight: 600; }
+
+  /* ---------- Karten ---------- */
+  .karten {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 28px;
+  }
+  .karte {
+    background: var(--farbe-karte);
+    border-radius: var(--radius);
+    box-shadow: var(--schatten);
+    padding: 32px;
+  }
+  .karte.dunkel { background: var(--farbe-dunkel); color: #F2ECE4; }
+  .karte.dunkel .karte-text { color: #C9C0B5; }
+  .karte.dunkel h3 { color: #FFFFFF; }
+
+  .nummer {
+    width: 56px; height: 56px;
+    border-radius: 50%;
+    background: var(--farbe-akzent);
+    color: #FFFFFF;
+    font-family: var(--schrift-serif);
+    font-size: 24px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 22px;
+  }
+  .karte h3 {
+    font-size: 21px; font-weight: 700;
+    color: var(--farbe-dunkel);
+    margin-bottom: 10px;
+  }
+  .karte-text { color: var(--farbe-text-grau); font-size: 16px; }
+  .karte-text + .karte-text { margin-top: 10px; }
+
+  /* ---------- Vergleichs-/Datenkarte ---------- */
+  .daten {
+    background: var(--farbe-dunkel);
+    color: #F2ECE4;
+    border-radius: var(--radius);
+    box-shadow: var(--schatten);
+    padding: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 32px;
+    text-align: center;
+  }
+  .daten .zahl {
+    font-family: var(--schrift-serif);
+    font-weight: 800;
+    font-size: 46px;
+    color: #FFFFFF;
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+  .daten .zahl-label { color: #C9C0B5; font-size: 15px; }
+
+  /* ---------- Hervorhebungs-Box ---------- */
+  .box {
+    background: #FBF8F3;
+    border-left: 5px solid var(--farbe-akzent);
+    border-radius: 12px;
+    padding: 28px 32px;
+    margin-bottom: 18px;
+  }
+  .box h4 {
+    font-family: var(--schrift-serif);
+    font-size: 22px;
+    color: var(--farbe-dunkel);
+    margin-bottom: 10px;
+  }
+  .box p { color: var(--farbe-text-grau); font-size: 16px; }
+
+  /* ---------- Reflexionsliste ---------- */
+  ul.reflexion { list-style: none; }
+  ul.reflexion li {
+    position: relative;
+    padding-left: 34px;
+    margin-bottom: 16px;
+    font-size: 17px;
+    color: var(--farbe-text);
+    max-width: 820px;
+  }
+  ul.reflexion li::before {
+    content: "?";
+    position: absolute; left: 0; top: 0;
+    width: 24px; height: 24px;
+    background: var(--farbe-akzent);
+    color: #FFF;
+    border-radius: 50%;
+    font-size: 14px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  /* ---------- Zitat ---------- */
+  .zitat {
+    font-family: var(--schrift-serif);
+    font-style: italic;
+    font-size: 28px;
+    line-height: 1.4;
+    color: var(--farbe-akzent);
+    text-align: center;
+    max-width: 880px;
+    margin: 64px auto 12px;
+  }
+  .zitat-quelle {
+    text-align: center;
+    color: var(--farbe-text-grau);
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  /* ---------- Fußzeile ---------- */
+  .fuss {
+    margin-top: 72px;
+    padding-top: 28px;
+    border-top: 1px solid #D9CFC2;
+    color: var(--farbe-text-grau);
+    font-size: 14px;
+    text-align: center;
+  }
+  .fuss a { color: var(--farbe-akzent); text-decoration: none; }
+
+  @media (max-width: 640px) {
+    body { padding: 40px 22px; }
+    .ueberschrift h1 { font-size: 36px; }
+    .abschnitt-titel h2 { font-size: 26px; }
+    .meta { padding-left: 0; }
+  }
+</style>
+</head>
+<body>
+  <div class="seite">
+
+    <div class="label">Kurszusammenfassung · Künstliche Intelligenz verstehen</div>
+
+    <div class="ueberschrift">
+      <h1>AGI 2027 – Das Jahr der Innovatoren</h1>
+    </div>
+    <p class="meta">
+      Nach dem Video <strong>„AGI 2027 – 12 Monate, die alles verändern und fast niemand merkt es"</strong><br>
+      Kanal: Navigationshilfe KI-Revolution (Lars Hatwig) · Länge: 29:45 Min.
+    </p>
+
+    <!-- YouTube-Video -->
+    <div class="video-wrap">
+      <iframe
+        src="https://www.youtube-nocookie.com/embed/T1OWW5HcVRI"
+        title="AGI 2027 – 12 Monate, die alles verändern und fast niemand merkt es"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+
+    <!-- Überblick -->
+    <div class="abschnitt">
+      <div class="abschnitt-titel"><h2>Worum es geht</h2></div>
+      <p class="fliesstext">
+        Das kommende Jahr 2027 wird laut dieser Analyse <strong>kein lauter, filmreifer Knall</strong> –
+        keine Roboter, die durch die Straßen marschieren. Stattdessen erleben wir eine
+        <strong>stille, fast unsichtbare, aber gewaltige Transformation</strong> unseres Alltags:
+        den Übergang von bloßer Rechenleistung hin zu echter, angewandter Innovation.
+      </p>
+      <p class="fliesstext grau">
+        Die zentrale Botschaft: Wer sich nur von täglichen Schlagzeilen treiben lässt
+        („neues Modell hier, Breaking News da"), verpasst die eigentlichen Mechaniken.
+        Diese Zusammenfassung erklärt sie Schritt für Schritt – und zeigt, wie man sich
+        in den nächsten 12 Monaten vorbereitet, ohne von der Informationsflut erdrückt zu werden.
+      </p>
+    </div>
+
+    <!-- Der Wandel -->
+    <div class="abschnitt">
+      <div class="abschnitt-titel"><h2>Vom Arbeiter zum Wissenschaftler</h2></div>
+      <p class="fliesstext">
+        Um 2027 zu verstehen, lohnt der Blick auf <strong>2026 – das „Jahr der Agenten"</strong>:
+        KI ist nicht länger ein verherrlichter Chatbot, sondern führt als Agent selbständig
+        ganze Aufgabenketten aus. Sie wendet bestehendes Wissen rasend schnell an – schreibt Code,
+        sortiert Datenbanken, fasst Meetings zusammen. Sie bleibt aber ein reiner Ausführungsarbeiter.
+      </p>
+      <div class="karten">
+        <div class="karte">
+          <div class="nummer">1</div>
+          <h3>2026 · Der Arbeiter</h3>
+          <p class="karte-text">KI wendet vorhandenes Wissen extrem schnell an. Sie macht das, was wir ihr sagen.</p>
+        </div>
+        <div class="karte dunkel">
+          <div class="nummer">2</div>
+          <h3>2027 · Der Innovator</h3>
+          <p class="karte-text">KI entdeckt eigenständig <em>neues</em> Wissen: Sie generiert Hypothesen und testet sie.</p>
+        </div>
+        <div class="karte">
+          <div class="nummer">3</div>
+          <h3>Die Folge</h3>
+          <p class="karte-text">Aus „schneller ausführen" wird „grundlegend Neues schaffen" – der eigentliche Paradigmenwechsel.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Beispiel Medizin -->
+    <div class="abschnitt">
+      <div class="abschnitt-titel"><h2>Das Beispiel Medizin</h2></div>
+      <p class="fliesstext">
+        Statt jahrelang in der Petrischale zu mischen, hat KI die physikalischen und chemischen
+        Grundregeln so tief verstanden, dass sie <strong>chemische Reaktionen virtuell simulieren</strong> kann.
+        Das Unternehmen <strong>Insilico Medicine</strong> legte Phase-2a-Daten für ein neues Medikament
+        gegen Lungenfibrose vor – getestet an echten Patienten. Was menschliche Forscherteams normalerweise
+        rund ein Jahrzehnt kostet, gelang hier in einem Bruchteil der Zeit:
+        das schnellste je entwickelte Medikament.
+      </p>
+      <div class="daten">
+        <div>
+          <div class="zahl">~10 J.</div>
+          <div class="zahl-label">klassische Entwicklungszeit</div>
+        </div>
+        <div>
+          <div class="zahl">15 Mio.</div>
+          <div class="zahl-label">rein computergestützt analysierte Verbindungen</div>
+        </div>
+        <div>
+          <div class="zahl">30–50 %</div>
+          <div class="zahl-label">kürzere Entwicklung laut AstraZeneca</div>
+        </div>
+      </div>
+      <p class="fliesstext grau" style="margin-top:22px;">
+        Das Prinzip greift weit über die Pharmabranche hinaus: in der <strong>Energiebranche</strong>
+        (intelligente Stromnetze / Smart Grids) und den <strong>Materialwissenschaften</strong>
+        (z. B. selbstheilende Materialien) wird heute zuerst bis auf die atomare Ebene simuliert –
+        und erst dann in der Realität umgesetzt.
+      </p>
+    </div>
+
+    <!-- Copilot statt Ersatz -->
+    <div class="abschnitt">
+      <div class="abschnitt-titel"><h2>Copilot, nicht Ersatz</h2></div>
+      <p class="fliesstext">
+        Schmeißt die KI den Forscher aus dem Labor? <strong>Nein.</strong> 2027 ist noch keine
+        Science-Fiction-Singularität. Der Wandel ist intensiv, aber <strong>inkrementell</strong>.
+        Die Maschine agiert als unermüdlicher, hochzuverlässiger Copilot:
+      </p>
+      <div class="box">
+        <h4>Die neue Arbeitsteilung</h4>
+        <p>
+          Der <strong>Mensch gibt Intuition und Richtung vor</strong> – wirft eine (auch verrückte) Hypothese
+          ins System. Die <strong>Maschine überwindet die Distanz der Ausführung in Lichtgeschwindigkeit</strong>:
+          Sie gleicht die Idee mit der gesamten je veröffentlichten Fachliteratur ab und führt die Simulationen durch.
+        </p>
+      </div>
+    </div>
+
+    <!-- Machtverschiebung -->
+    <div class="abschnitt">
+      <div class="abschnitt-titel"><h2>Macht wandert zu den Kleinen</h2></div>
+      <p class="fliesstext">
+        Entgegen der Intuition gewinnen <strong>nicht</strong> nur die Konzerne mit den größten Budgets.
+        Der Zugang zu den Werkzeugen wird <strong>demokratisiert</strong>: KI-Modelle werden kleiner,
+        effizienter und sind oft Open Source. Man braucht kein eigenes Rechenzentrum mehr.
+        Solo-Gründer oder Teams von drei, vier Leuten bringen in Wochen Produkte auf den Markt,
+        für die früher Jahre, Millionen an Kapital und große Abteilungen nötig waren.
+        <strong>Die Eintrittsbarriere für echte Innovation sinkt nahezu auf null.</strong>
+      </p>
+      <p class="fliesstext grau">
+        Der Einwand: Ertrinken wir dann in mittelmäßigem „Müll"? Die Quantität explodiert tatsächlich –
+        aber es ändert sich auch die <strong>Art, wie wir komplexe Probleme lösen</strong>.
+        Die harten Zahlen zeigen eine Verschiebung, keine Stagnation:
+      </p>
+      <div class="karten">
+        <div class="karte">
+          <h3>83 Mio.</h3>
+          <p class="karte-text">klassische Routine-Jobs fallen bis 2027 weg (World Economic Forum).</p>
+        </div>
+        <div class="karte">
+          <h3>170 Mio.</h3>
+          <p class="karte-text">neue Jobs und Rollen entstehen im selben Zeitraum (oft übersehen).</p>
+        </div>
+        <div class="karte dunkel">
+          <h3>30 %</h3>
+          <p class="karte-text">aller Arbeitsstunden automatisiert bis 2030 – 2027 ist laut McKinsey der Wendepunkt.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Zwei Bilder -->
+    <div class="abschnitt">
+      <div class="abschnitt-titel"><h2>Zwei Bilder, die alles erklären</h2></div>
+
+      <div class="box">
+        <h4>Der Buchdruck</h4>
+        <p>
+          Als Gutenberg die Druckerpresse erfand, dachten viele nur: „Jetzt kopieren wir Bibeln schneller."
+          Doch der eigentliche Punkt war nicht das schnellere Kopieren – es war, dass <strong>Wissen endlich fließen
+          konnte</strong>. Eine Idee aus Italien wurde Wochen später in England gelesen, kritisiert, weiterentwickelt.
+          So wurden Reformation und wissenschaftliche Revolution erst möglich. Genauso verändert die KI-Welle 2027
+          nicht das Tempo, sondern was wir überhaupt als Innovation begreifen: eine neue Form
+          <strong>kollektiver Kreativität</strong>.
+        </p>
+      </div>
+
+      <div class="box">
+        <h4>Das Myzel-Prinzip</h4>
+        <p>
+          Wir starren immer nach oben – auf die großen alten Bäume (die Tech-Giganten, die riesigen Serverfarmen).
+          Doch ein Pilzforscher weiß: Die wahre Intelligenz des Waldes ist das <strong>Myzel</strong>, das feine,
+          fast unsichtbare Pilzgeflecht unter der Erde. Es ist radikal dezentral, verbindet alles und tauscht
+          Informationen ohne zentrales Gehirn aus. So entstehen die disruptiven Innovationen 2027:
+          <strong>aus dem Untergrund</strong> – ein Entwickler in Berlin, der ein freies Sprachmodell mit lokalen
+          Klimadaten füttert; kleine Teams, die über GitHub in Echtzeit die Durchbrüche der anderen einbauen.
+          Die Großen besitzen die größten Computer – aber nicht mehr die einzige Quelle der Intelligenz.
+        </p>
+      </div>
+    </div>
+
+    <!-- Forecaster -->
+    <div class="abschnitt">
+      <div class="abschnitt-titel"><h2>Warum die Experten streiten</h2></div>
+      <p class="fliesstext">
+        <strong>AGI</strong> (Artificial General Intelligence) bezeichnet ein System, das auf menschlichem Niveau
+        logisch schlussfolgert und ganz unterschiedliche Probleme lösen kann. Wann sie erreicht wird, dazu
+        driften die besten Prognosegruppen der Welt weit auseinander:
+      </p>
+      <div class="karten">
+        <div class="karte">
+          <h3>Samotsvety</h3>
+          <p class="karte-text">Februar 2026: 25 % Wahrscheinlichkeit für AGI bis 2029 – also quasi übermorgen.</p>
+        </div>
+        <div class="karte">
+          <h3>Good Heart Labs</h3>
+          <p class="karte-text">Juni 2026: Median erst 2031, mit sehr breitem Intervall von 2027 bis 2044.</p>
+        </div>
+      </div>
+      <div class="box" style="margin-top:28px;">
+        <h4>Die entscheidende Pointe</h4>
+        <p>
+          Die große Spanne ist <strong>kein Zeichen für abflachenden Hype</strong> – das wäre die gefährlichste
+          Schlussfolgerung. Denn fast jeder Top-Forecaster, der zuletzt korrigiert hat, hat sein Zieldatum
+          <strong>nach vorne</strong> verschoben: „Es geht schneller als gedacht – wir wissen nur nicht, wie viel
+          schneller." Die Uneinigkeit ist der Beweis, dass wir in einer <strong>extremen, nichtlinearen
+          Beschleunigungsphase</strong> sind, die jedes lineare Vorhersagemodell sprengt.
+        </p>
+      </div>
+    </div>
+
+    <!-- Praxis -->
+    <div class="abschnitt">
+      <div class="abschnitt-titel"><h2>Was das für dich bedeutet</h2></div>
+      <p class="fliesstext">
+        Der Schlüsselbegriff fürs nächste Jahr: <strong>vom Spezialisten zum Orchestrator</strong> –
+        vom Fachmann zum Dirigenten. Wer früher Photoshop öffnete und Pixel schob oder an Formulierungen feilte,
+        führt 2027 ein <strong>Team aus KI-Agenten</strong>. Der Befehl lautet nicht mehr „hilf mir, diesen Satz
+        schöner zu schreiben", sondern „erledige diesen gesamten Prozess und berichte mir das Ergebnis".
+      </p>
+      <div class="karten">
+        <div class="karte">
+          <div class="nummer">A</div>
+          <h3>Agent A</h3>
+          <p class="karte-text">Analysiert die aktuellen Design-Trends der Konkurrenz im Zielmarkt.</p>
+        </div>
+        <div class="karte">
+          <div class="nummer">B</div>
+          <h3>Agent B</h3>
+          <p class="karte-text">Generiert daraus zehn völlig unterschiedliche Kampagnen-Entwürfe.</p>
+        </div>
+        <div class="karte">
+          <div class="nummer">C</div>
+          <h3>Agent C</h3>
+          <p class="karte-text">Gleicht die Entwürfe mit Budget und Compliance-Richtlinien ab.</p>
+        </div>
+      </div>
+      <p class="fliesstext grau" style="margin-top:22px;">
+        Du führst die Routineschritte nicht mehr selbst aus – du <strong>bewertest, kombinierst und triffst
+        die strategischen Entscheidungen</strong>. Du dirigierst das Orchester, statt selbst die Geige zu spielen.
+        Weil die KI die Ausführung übernimmt, wird auch die <strong>Portfolio-Karriere</strong> möglich:
+        mehrere unabhängige Einkommensquellen gleichzeitig, weil du extrem gut delegieren kannst.
+      </p>
+    </div>
+
+    <!-- Ludditen-Falle -->
+    <div class="abschnitt">
+      <div class="abschnitt-titel"><h2>Die Ludditen-Falle</h2></div>
+      <p class="fliesstext">
+        Die englischen Textilarbeiter („Ludditen") zerschlugen aus Angst um ihre Jobs nachts die neuen Webstühle.
+        Die moderne Variante ist subtiler: Aus Stolz auf das eigene Handwerk – oder aus Überforderung – weigert
+        man sich, die neuen Werkzeuge zu integrieren („mein handgeschriebener Text hat mehr Seele").
+      </p>
+      <div class="box">
+        <h4>Der wahre Gegner</h4>
+        <p>
+          Du verlierst am Ende <strong>nicht gegen die Maschine</strong>, sondern gegen den Kollegen am Schreibtisch
+          nebenan, der seine Vorbehalte abgelegt hat und als Orchestrator mit KI die zehnfache Menge an
+          hochwertiger Arbeit abliefert.
+        </p>
+      </div>
+    </div>
+
+    <!-- Seneca / Zeit -->
+    <p class="zitat">
+      „Wir verlieren unsere Zeit nicht – wir geben sie aktiv weg."
+    </p>
+    <p class="zitat-quelle">Nach Seneca</p>
+    <p class="fliesstext grau" style="margin-top:24px;text-align:center;max-width:820px;margin-left:auto;margin-right:auto;">
+      Wer 2026 abwartet, bis der Sturm ihn zum Handeln zwingt, verschenkt genau die Zeit, in der er in Ruhe
+      hätte lernen können, Orchestrator zu werden. Es geht nicht um Panik, sondern darum, die nächsten
+      12 Monate <strong style="color:var(--farbe-dunkel);">aktiv als Lernfenster</strong> zu nutzen.
+      Die Einstiegshürden waren nie so niedrig wie heute.
+    </p>
+
+    <!-- Reflexionsfragen -->
+    <div class="abschnitt" style="margin-top:64px;">
+      <div class="abschnitt-titel"><h2>Reflexionsfragen für den Kurs</h2></div>
+      <ul class="reflexion">
+        <li>Wo in deiner Arbeit wendest du heute nur bestehendes Wissen an – und wo könntest du echte Innovation entdecken?</li>
+        <li>Welche deiner Aufgaben sind „Spezialisten-Arbeit", die du an KI-Agenten delegieren könntest?</li>
+        <li>Wie sähe deine persönliche Portfolio-Karriere aus, wenn die Ausführung dich nicht mehr begrenzt?</li>
+        <li>An welcher Stelle merkst du bei dir selbst die „Ludditen-Falle" – Stolz oder Überforderung?</li>
+        <li>Was ist dein konkreter erster Schritt, um die nächsten 12 Monate als Lernfenster zu nutzen?</li>
+      </ul>
+    </div>
+
+    <!-- Buchempfehlung -->
+    <div class="abschnitt">
+      <div class="box">
+        <h4>Zum Weiterlesen</h4>
+        <p>
+          Wer den strategischen Fahrplan praxisnah vertiefen will:
+          <strong>Lars Hatwig – „Navigationshilfe durch die KI-Revolution".</strong>
+          Dort werden Orchestrator-Rolle, Portfolio-Karriere und die mentale Vorbereitung
+          detailliert heruntergebrochen.
+        </p>
+      </div>
+    </div>
+
+    <!-- Schlussbild -->
+    <p class="zitat">
+      „Es gibt keine Zentrale mehr – nur noch Verbindungen. Ein globales, pulsierendes
+      Resonanzfeld aus menschlichen Ideen und maschineller Ausführungskraft."
+    </p>
+    <p class="zitat-quelle">Das Schlussbild des Videos</p>
+
+    <div class="fuss">
+      Kurszusammenfassung · Impact4Entrepreneurship gGmbH<br>
+      Quelle: <a href="https://youtu.be/T1OWW5HcVRI" target="_blank" rel="noopener">YouTube – Navigationshilfe KI-Revolution</a> ·
+      Inhalte nach Lars Hatwig. Eigennamen und Zahlen wie im Video genannt.
+    </div>
+
+  </div>
+</body>
+</html>
